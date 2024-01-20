@@ -17,14 +17,15 @@ public class CarManufacturer {
     }
     
     public void constructCar(){
-        carBuilder.buildChassis();
-        carBuilder.buildEngine();
-        carBuilder.buildInterior();
-        carBuilder.buildExterior();
-        carBuilder.buildAccessories();
+        carBuilder.withChassis("Sedan Chassis");
+        carBuilder.withEngine("Standard Engine");
+        carBuilder.withInterior("Basic Interior");
+        carBuilder.withExterior("Sleek Exterior");
+        carBuilder.withAccessories("Standard Accessories + touch screen");
+        carBuilder.withColor("White");
     }
     
     public Car getCar() {
-        return carBuilder.getCar();
+        return carBuilder.build();
     }
 }

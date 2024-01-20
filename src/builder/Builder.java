@@ -9,50 +9,50 @@ package builder;
  *
  * @author jgfch
  */
-public class SedanCarBuilder implements CarBuilder {
-    
+public class Builder implements CarBuilder {
+
     private Car car;
-    
-    public SedanCarBuilder() {
-        this.car = new Car("Sedan");
+
+    public Builder(String name) {
+        this.car = new Car(name);
     }
-    
+
     @Override
     public CarBuilder withChassis(String chassis) {
         car.setChassis(chassis);
         return this;
     }
-    
+
     @Override
     public CarBuilder withEngine(String engine) {
         car.setEngine(engine);
         return this;
     }
-    
+
     @Override
     public CarBuilder withInterior(String interior) {
         car.setInterior(interior);
         return this;
     }
-    
+
     @Override
     public CarBuilder withExterior(String exterior) {
         car.setExterior(exterior);
         return this;
     }
-    
+
     @Override
     public CarBuilder withAccessories(String accessories) {
         car.setAccessories(accessories);
         return this;
     }
-    
+
     @Override
     public CarBuilder withColor(String color) {
         car.setColor(color);
         return this;
     }
-    
+
     @Override
     public Car build() {
         return car;

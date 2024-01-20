@@ -10,10 +10,11 @@ package builder;
  * @author jgfch
  */
 public interface CarBuilder {
-    void buildChassis();
-    void buildEngine();
-    void buildInterior();
-    void buildExterior();
-    void buildAccessories();
-    Car getCar();
+    CarBuilder withChassis(String chassis);
+    CarBuilder withEngine(String engine);
+    CarBuilder withInterior(String interior);
+    CarBuilder withExterior(String exterior);
+    CarBuilder withAccessories(String accessories);
+    CarBuilder withColor(String color);
+    Car build();
 }

@@ -10,15 +10,17 @@ package builder;
  * @author jgfch
  */
 public class Car {
-
+    
+    private String name;
     private String chassis;
     private String engine;
     private String interior;
     private String exterior;
     private String accessories;
+    private String color;
 
-    public Car(String type) {
-        // Initialize the basic properties
+    public Car(String name) {
+       this.name = name;
     }
 
     public String getChassis() {
@@ -41,6 +43,10 @@ public class Car {
         return accessories;
     }
 
+    public String getColor() {
+        return color;
+    }
+    
     public void setChassis(String chassis) {
         this.chassis = chassis;
     }
@@ -61,10 +67,15 @@ public class Car {
         this.accessories = accessories;
     }
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+    
     @Override
     public String toString() {
-        return "Car {\n"
+        return "Car: "+ name +"{\n"
                 + "chassis='" + chassis + "'\n"
+                + "color='" + color + "'\n"
                 + "engine='" + engine + "'\n"
                 + "interior='" + interior + "'\n"
                 + "exterior='" + exterior + "'\n"
